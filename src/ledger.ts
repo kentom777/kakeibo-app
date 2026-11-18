@@ -25,6 +25,6 @@ export function totals(entries: Entry[]) {
   const expense = entries
     .filter((entry) => entry.type === 'expense')
     .reduce((sum, entry) => sum + entry.amount, 0);
-  return { income, expense, balance: income + expense };
+  return { income, expense, balance: income - expense };
 }
 
